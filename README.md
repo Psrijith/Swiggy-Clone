@@ -1,5 +1,7 @@
 # Swiggy Clone
 
+please check out the working video [Drive link](https://drive.google.com/file/d/1mAHEoPu3Plx5UtH4nvws9FhnQ5g9oPs7/view?usp=sharing)
+
 This project is a clone of Swiggy, a popular food ordering and delivery app, built using Angular. It replicates key features such as displaying food deals, top picks, recommendations, and a cart functionality for a seamless user experience.
 
 ## Project Components
