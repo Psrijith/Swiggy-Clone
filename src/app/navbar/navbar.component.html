@@ -1,0 +1,59 @@
+<div class="flex flex-wrap justify-between items-center px-4 sm:px-6 md:px-9 py-4 mx-auto max-w-screen-xl">
+    <!-- Logo and Location -->
+    <div class="flex items-center gap-3">
+        <a href="/home">
+            <img class="h-12 w-12" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_800,h_800/portal/m/logo_192x192.png" alt="Logo">
+        </a>
+        <div class="flex items-center mx-4 gap-2">
+            <input type="text" placeholder="New Dilsukh Nagar Colony, Dilsukhnagar..." value="New Dilsukh Nagar Colony, Dilsukhnagar..." class="w-full font-bold py-2 border-b-2 border-black outline-none max-w-[200px] sm:max-w-[300px]">
+            <img class="h-5 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/32/32195.png" alt="Dropdown Icon">
+        </div>
+    </div>
+
+    <div class="flex items-center lg:hidden cursor-pointer">
+       <a href="/cart"> <img src="https://cdn-icons-png.flaticon.com/512/40/40368.png" alt="Cart" class="h-6 w-6"></a>
+    </div>
+
+    <!-- Menu Options -->
+    <div class="hidden lg:flex flex-wrap gap-6 items-center text-slate-800 font-semibold mt-4 md:mt-0">
+        <div class="flex gap-1 items-center cursor-pointer">
+            <img src="https://www.shutterstock.com/image-vector/briefcase-thin-line-vector-icon-600nw-1920649895.jpg" alt="Swiggy Corporate Icon" class="h-12 w-12">
+            <span>Swiggy Corporate</span>
+        </div>
+        <div class="flex gap-1 items-center cursor-pointer">
+            <img src="https://cdn-icons-png.flaticon.com/512/64/64673.png" alt="Search Icon" class="h-6 w-6">
+            <span>Search</span>
+        </div>
+        <div class="flex gap-1 items-center cursor-pointer">
+            <img src="https://static.vecteezy.com/system/resources/previews/002/205/938/non_2x/offer-tag-icon-free-vector.jpg" alt="Offers Icon" class="h-6 w-6">
+            <span>Offers <sup class="text-[#ffa700] font-bold">NEW</sup></span>
+        </div>
+        <div class="flex gap-1 items-center cursor-pointer">
+            <img src="https://cdn-icons-png.flaticon.com/512/3602/3602145.png" alt="Help Icon" class="h-6 w-6">
+            <span>Help</span>
+        </div>
+
+        <!--profile-->
+
+        <div class="relative">
+            <div class="flex gap-1 items-center cursor-pointer" (click)="toggleDropdown()">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile Icon" class="h-6 w-6">
+                <span>Profile</span>
+            </div>
+            
+            <div *ngIf="dropdownOpen" class="absolute top-full left-0 mt-2 w-40 bg-white border border-gray-300 rounded-lg shadow-lg">
+                <a href="favorites" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Favorites</a>
+                <a href="#" (click)="logout()" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Logout</a>
+            </div>
+        </div>
+
+        <!--Cart-->
+        <a href="/cart">
+        <div class="flex gap-1 items-center cursor-pointer">
+            <img src="https://cdn-icons-png.flaticon.com/512/40/40368.png" alt="Cart Icon" class="h-6 w-6">
+            <span>Cart</span>
+        </div></a>
+    
+    </div>
+
+</div>

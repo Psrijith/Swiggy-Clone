@@ -1,0 +1,18 @@
+/* Cart Panel (Initially Hidden) */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;  /* Initially hidden off-screen */
+  width: 350px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;  /* Smooth transition for sliding effect */
+  z-index: 20;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.cart-visible {
+  right: 0;  /* When cart is visible, it slides into view */
+}

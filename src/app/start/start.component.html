@@ -1,0 +1,87 @@
+ <div class="h-auto bg-[#ff5200]">
+    <!-- Navbar -->
+    <div class="flex gap-3 md:flex-row items-center justify-between p-6 md:px-36">
+      <a href="#">
+        <img class="h-8 md:h-11 w-32 md:w-36" src="https://res.cloudinary.com/dutdah0l9/image/upload/v1720058694/Swiggy_logo_bml6he.png" alt="logo">
+      </a>
+      <div class="flex flex-col md:flex-row text-white gap-4 md:gap-8 items-center mt-4 md:mt-0">
+        <h1 class="font-bold text-lg md:text-lg hidden md:block">Swiggy Corporate</h1>
+        <h1 class="font-bold text-lg md:text-xl hidden md:block">Partner with us</h1>
+
+        <div class="flex gap-2 md:gap-4">
+          <button class="font-extrabold h-12 w-32 md:h-14 md:w-36 border p-3 rounded-xl border-white flex items-center justify-center transition duration-300 hover:bg-white hover:text-[#ff5200]">
+            Get the App <span class="font-light ml-1">↗</span>
+          </button>
+
+          <button class="font-extrabold h-12 w-32 md:h-14 md:w-36 p-3 rounded-xl bg-black transition duration-300 hover:bg-gray-800" (click)="openSlidePanel()">
+            Sign in
+          </button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div>
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png" alt="Small Image 1" class="hidden lg:block absolute max-w-xs max-h-xs object-contain"/>
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png  " alt="Small Image 3" class="hidden lg:block absolute right-0 max-w-xs max-h-xs object-contain"/>
+    </div>
+
+
+    <!-- Main Text -->
+    <div>
+      <h1 class="font-bold text-white mt-0 mx-36 pl-48 pr-48 pt-24 text-center text-5xl justify-center hidden lg:block">
+        Order food & groceries. Discover best restaurants. Swiggy it!
+      </h1>
+    </div>
+    
+
+    <!-- Search Boxes -->
+    <div class="flex flex-col md:flex-row justify-center mt-12 gap-4">
+      <div class="flex items-center max-md:ml-16 h-12 bg-white h-18 w-64 rounded-lg pl-4">
+        <img class="h-6 w-36 mr-2" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTGmrBhEsyVjnh72BXjHmxJe-IwqgWo4UkXrcwRE5ncXo_9HDg2" alt="">
+        <input type="text" placeholder="Get GPS Location..." class="focus:outline-none">
+        <img class=" bg-white h-4 w-10 mr-2 cursor-pointer" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Alfabeto_camuno-uw1.svg" alt=""/>
+      </div>
+
+      <div class="flex items-center max-md:ml-4 bg-white h-12 w-96 rounded-lg pl-4">
+        <input type="text" placeholder="Search for restaurant, item or more" class="flex-grow focus:outline-none">
+        <img class="h-6 mr-2 cursor-pointer" src="https://cdn3.iconfinder.com/data/icons/flaticons-1/24/flaticon_search-512.png" alt="">
+      </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="flex max-sm:flex-col mb-0 max-md:ml-12 justify-center mt-8 mr-36 ml-36 gap-2 " >
+      <div class=" w-80 cursor-pointer"> 
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/16/ca34e375-f1bd-4a2e-a3e7-0a20833be83b_IM4BU1.png" alt="Instamart" >
+      </div>
+      <div class=" w-80 cursor-pointer overflow-hidden"> 
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/16/ca34e375-f1bd-4a2e-a3e7-0a20833be83b_IM4BU1.png" alt="Instamart" >
+      </div>
+      <div class="hidden lg:block   w-80 cursor-pointer" > 
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/16/ca34e375-f1bd-4a2e-a3e7-0a20833be83b_IM4BU1.png" alt="Instamart" >
+      </div> 
+      <div class="hidden lg:block   w-80 cursor-pointer">
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/31/14033c0b-8907-420b-b72a-d26cfa68dc7b_Genie4BU.png" alt="">
+      </div>  
+    </div>
+
+    <div class="hidden lg:block overflow-x-auto h-8 ml-36 mr-36 ">
+        <div class="whitespace-nowrap bg-white min-w-[200%]"> 
+        </div>
+    </div>
+    
+    <div class="p-3">
+
+    </div>
+    
+    <div class="font-bold text-center text-black bg-white"><h1>**** Sign In to Visit Home  ****</h1>  </div>
+
+    <!-- Login Slide Panel -->
+    <app-login [openSlidePanel]="isSlidePanelOpen" (closePanel)="closeSlidePanel()"></app-login>
+  
+  </div>
+
+
+
+  
+   

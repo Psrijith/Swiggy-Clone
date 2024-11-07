@@ -1,0 +1,25 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { products } from '../products';
+
+
+import { KfcComponent } from './kfc.component';
+
+describe('KfcComponent', () => {
+  let component: KfcComponent;
+  let fixture: ComponentFixture<KfcComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [KfcComponent]
+    })
+    .compileComponents();
+    
+    fixture = TestBed.createComponent(KfcComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,0 +1,99 @@
+<div class="flex flex-col mt-6 md:flex-row mt- bg-white border border-gray-200 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+
+  <a href="/kfc" class="absolute top-4 right-4 text-green-500 font-semibold text-lg pr-4">← Back to KFC</a>
+  <!-- Address Selection Section -->
+  <div class="w-full md:w-2/3 pr-4">
+    <h2 class="font-bold text-xl mb-4 text-orange-600">Secure Checkout</h2>
+    <h2 class="font-semibold text-xl mb-4">Choose a delivery address</h2>
+    <p class="text-gray-500 mb-6">Multiple addresses in this location</p>
+    
+    <!-- Address Options -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="border border-gray-300 rounded-lg p-4">
+        <h3 class="font-semibold">Home</h3>
+        <p class="text-sm text-gray-600">1-XY-A6, New Dilsukh Nagar Colony, Hyderabad, Telangana, 5000069, India</p>
+        <p class="text-sm text-gray-500 mt-2">18 MINS</p>
+        <button class="mt-4 w-full bg-green-500 text-white rounded-lg p-2 font-semibold">DELIVER HERE</button>
+      </div>
+
+      <div class="border border-gray-300 rounded-lg p-4">
+        <h3 class="font-semibold">Other</h3>
+        <p class="text-sm text-gray-600">Hno 2A-9B-16, Charminar , Hyderabad, Telangana, 5009696, India</p>
+        <p class="text-sm text-gray-500 mt-2">18 MINS</p>
+        <button class="mt-4 w-full bg-green-500 text-white rounded-lg p-2 font-semibold">DELIVER HERE</button>
+      </div>
+
+      <div class="border border-dashed border-gray-300 rounded-lg p-4 flex items-center justify-center">
+        <button class="text-green-500 font-semibold">ADD NEW ADDRESS</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Summary Section -->
+  <div class="w-full md:w-1/3 mt-6 md:mt-0">
+    <div class="border border-gray-300 rounded-lg p-4 mt-12">
+      <h2 class="font-semibold text-xl mb-4">KFC</h2>
+      
+      <!-- Cart Items List -->
+      <div *ngFor="let item of cartItems" class="flex items-center justify-between py-2">
+        <div>
+          <p class="font-semibold">{{ item[0] }}</p>
+          <div class="flex items-baseline">
+            <span class="line-through text-sm text-gray-500">₹{{ item.originalPrice }}</span>
+            <span class="ml-2 font-semibold text-lg">₹{{ item[1] }}</span>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <button (click)="decreaseQuantity(item)" class="bg-gray-200 rounded px-3 py-1 text-xl font-bold">-</button>
+          <span class="mx-2">{{ item[2] }}</span>
+          <button (click)="increaseQuantity(item)" class="bg-gray-200 rounded px-3 py-1 text-xl font-bold">+</button>
+        </div>
+      </div>
+
+      <!-- Additional Options -->
+      <div class="mt-4">
+        <input type="text" placeholder="Any suggestions? We will pass it on..." class="w-full p-2 border border-gray-300 rounded mb-3">
+        <div class="flex items-center mb-3">
+          <input type="checkbox" id="noContact" class="mr-2">
+          <label for="noContact" class="text-sm text-gray-600">Opt in for No-contact Delivery</label>
+        </div>
+        <button class="w-full text-center bg-gray-200 text-gray-700 font-semibold p-2 rounded-lg">Apply Coupon</button>
+      </div>
+
+      <!-- Bill Details Section -->
+      <div *ngIf="cartItems.length > 0" class="mt-4 bg-gray-100 p-4 rounded-lg">
+        <div class="flex justify-between py-1">
+          <span>Item Total</span>
+          <span>₹{{ getTotal() }}</span>
+        </div>
+        <div class="flex justify-between py-1">
+          <span>Delivery Fee</span>
+          <span class="text-green-500 font-semibold">FREE</span>
+        </div>
+        <div class="flex justify-between py-1">
+          <span>Extra discount for you</span>
+          <span>-₹25</span>
+        </div>
+        <div class="flex justify-between py-1">
+          <span>Platform Fee</span>
+          <span>₹10</span>
+        </div>
+        <div class="flex justify-between py-1">
+          <span>GST and Restaurant Charges</span>
+          <span>₹88.20</span>
+        </div>
+      </div>
+
+      <div *ngIf="cartItems.length == 0" class="mt-6 text-lg font-semibold   justify-between">
+        <span class="text-gray-500">Cart is Empty </span> <br>  
+        <span class="text-gray-500">Please Add Items To The Cart </span> 
+      </div>
+
+      <!-- Total Amount Section -->
+      <div *ngIf="cartItems.length > 0" class="mt-6 text-lg font-semibold flex justify-between">
+        <span>To Pay</span>
+        <span>₹{{ getTotal() + 73.2 }}</span>
+      </div>
+    </div>
+  </div>
+</div>

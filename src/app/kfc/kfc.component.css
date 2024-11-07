@@ -1,0 +1,32 @@
+/* Style for the cart panel that slides in from the right */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;  /* Initially hidden off-screen */
+  width: 350px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;  /* Smooth transition for sliding effect */
+  z-index: 20;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.cart-visible {
+  right: 0;  /* When cart is visible, it slides into view */
+}
+
+/* Style for cart icon in navbar (Optional) */
+.cart-icon-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-icon-btn i {
+  font-size: 1.5rem;
+  color: #333;
+}
